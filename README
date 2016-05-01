@@ -1,0 +1,20 @@
+Serban Razvan
+312CD
+
+Am decis ca toata functionalitatea programului sa fie inclusa intr-un singur fisier p.c, deoarece multe din datele citite din fisiere si structurate sunt reutilizabile, rezultand in mai putine cicluri de calcul pentru calculator.
+
+Citesc input.txt si dupa fisierul imagine, respectiv fisierul bonus imagine, pentru fiecare caz avand ca rezultat structurat vectorul de structuri saved_numbers / saved_numbers_bonus si culoarea pixelilor (informatia bruta a imaginii) in matricea array.
+
+Din array am ajuns la vectorul de structuri folosind functiile check_if already_in, care returneaza 1 sau 0 dupa caz, daca pixelul a fost deja luat in considerare sau nu si add care adauga informatii despre cifra strict necesare (x si y coltului stanga sus, culoarea si cifra propriu zisa).
+
+Erori pot avea loc in cazul cifrelor 6 0 8 care sunt interpretate mai intai ca fiind o bara verticala (cifra 1) inainte de a fi interpretata cifra corecta, de aceea pentru aceste cazuri am aplicat niste masuri in plus care verifica daca se gaseste o cifra la dreapta pixelului curent (iar in cazul in care se gaseste, cifra 1 gasita face de fapt parte din una din cifrele 6 8 0).
+
+Functiile op1 op2 op3 si op_bonus prelucreaza informatia deja existenta si o scriu in fisiere.
+
+Functia op1 foloseste array pentru a scrie imaginea identica dar cifrele cu alta culoare.
+
+Functia op2 foloseste saved_numbers pentru a scrie in fisierul text cifrele gasite.
+
+Functia op3 foloseste functia remove_unwanted care scoate cifrele nedorite si permuta ordinea celor existente ca sa convina, dupa care scrie imaginea.
+
+Functia op_bonus este asemanatoare cu op2 doar ca foloseste functii putin modificate pentru a permite eroarea de un pixel ceruta de enunt.
